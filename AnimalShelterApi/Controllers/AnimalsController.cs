@@ -13,10 +13,10 @@ namespace AnimalShelterApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class SheltersController : ControllerBase
+  public class AnimalsController : ControllerBase
   {
     private AnimalShelterApiContext _db;
-    public SheltersController(AnimalShelterApiContext db)
+    public AnimalsController(AnimalShelterApiContext db)
     {
       _db = db;
     }
