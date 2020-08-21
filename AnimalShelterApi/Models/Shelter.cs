@@ -1,5 +1,5 @@
 namespace AnimalShelterApi.Models
-{ // 2int4str
+{ 
   public class Animal
   {
     public string SuggestedHome {get;set;}

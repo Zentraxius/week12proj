@@ -14,7 +14,7 @@ namespace AnimalShelterApi.Models
     {
       builder.Entity<Animal>() 
       .HasData(
-        new Animal { AnimalId = 1, AnimalName = "Portland National Animal Shelter", DogsCats = 14.5, DogsDescription = "We have 14 dogs currently awaiting a new home! Check out our website to see them or come on by!", CatsDescription = "We have 5 purrfect cats looking for a furever home, come adopt one today!" }
+        new Animal { AnimalId = 1, AdoptionFee = 0, AnimalName = "Toby", AnimalDescription = "Chonky Boi", AnimalHealth = "Healthy, all shots take care of, neutered!", SuggestedHome = "Toby is great with kids and an active environment, is also able to relax comfortably by himself or with cats, is afraid of other dogs." }
       );
     }
   }
