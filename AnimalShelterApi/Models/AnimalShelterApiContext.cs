@@ -9,12 +9,12 @@ namespace AnimalShelterApi.Models
     {
 
     }
-    public DbSet<Shelter> Shelters {get;set;}
+    public DbSet<Animal> Animals {get;set;}
     protected override void OnModelCreating(ModelBuilder builder)
     {
-      builder.Entity<Shelter>() 
+      builder.Entity<Animal>() 
       .HasData(
-        new Shelter { ShelterId = 1, Description = "Portland National Shelter", Dogs = 14, Cats = 5, DogsDescription = "We have 14 dogs currently awaiting a new home! Check out our website to see them or come on by!", CatsDescription = "We have 5 purrfect cats looking for a furever home, come adopt one today!" }
+        new Animal { AnimalId = 1, AnimalName = "Portland National Animal Shelter", DogsCats = 14.5, DogsDescription = "We have 14 dogs currently awaiting a new home! Check out our website to see them or come on by!", CatsDescription = "We have 5 purrfect cats looking for a furever home, come adopt one today!" }
       );
     }
   }
