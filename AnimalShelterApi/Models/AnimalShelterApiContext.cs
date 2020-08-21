@@ -9,14 +9,12 @@ namespace AnimalShelterApi.Models
     {
 
     }
-    public DbSet<Place> Places {get;set;}
+    public DbSet<Shelter> Shelters {get;set;}
     protected override void OnModelCreating(ModelBuilder builder)
     {
-      builder.Entity<Place>() 
+      builder.Entity<Shelter>() 
       .HasData(
-        new Place { PlaceId = 1, Name = "Puerta Vallarta", UserName = "Brittany", Rating = 5, Description = "A warm sunny town with lots of good food carts and food fresh from the ocean.", Country = "Mexico" },
-        new Place { PlaceId = 2, Name = "Yachats", UserName = "Brittany", Rating = 4, Description = "A little town on the Oregon coast with beautiful views of the ocean and one brewery.", Country = "USA" },
-        new Place { PlaceId = 3, Name = "Timothy Lake", UserName = "Kate", Rating = 2, Description = "Not that scenic and way too crowded to enjoy, unless you have a boat or some other watercraft.", Country = "USA" }
+        new Shelter { ShelterId = 1, Description = "Portland National Shelter", Dogs = 14, Cats = 5, DogsDescription = "We have 14 dogs currently awaiting a new home! Check out our website to see them or come on by!", CatsDescription = "We have 5 purrfect cats looking for a furever home, come adopt one today!" }
       );
     }
   }
