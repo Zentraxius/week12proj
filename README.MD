@@ -8,11 +8,17 @@
 
 _An API that allows users to view and see local animal shelter info._
 
+- This api allows you to view and paginate through the different animals looking for a home in this shelter.
+- Using pagination, you can further filther your results using search functions such as pages?/pageNumber=1&pageSize=2 this would give you only the top 2 results, due to pageSize=2
+- With this you can browse through all of the lovely animals available and filter out those that don't have what you're looking for, or only look for the best!
+
 ## Specifications
 
-| Behavior                                              |                      Input                      |                                  Output | Met? (Y/N) |
-| ----------------------------------------------------- | :---------------------------------------------: | --------------------------------------: | ---------: |
-| Check Local Shelter occupants without an adoption fee | http://localhost:5000/api/animals?adoptionfee=0 | API returns list of animals with no fee |   Y        |
+| Behavior                           |                              Input                               |                                               Output | Met? (Y/N) |
+| ---------------------------------- | :--------------------------------------------------------------: | ---------------------------------------------------: | ---------: |
+| Check Local Shelter occupants      |                http://localhost:5000/api/animals                 | API returns list of animals starting from lowest fee |          Y |
+| Check shelter api using Pagination |         http://localhost:5000/api/animals?adoptionfee=50         |    Returns animals with an adoption fee of "only" 50 |          Y |
+| Check only the top 3 results       | http://localhost:5000/api/animals/pages?/pageNumber=1&pageSize=3 |          Returns the top 3 animals due to pagination |          Y |
 
 ## Setup/Installation Requirements
 
@@ -29,14 +35,13 @@ _An API that allows users to view and see local animal shelter info._
   `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
   in the terminal
 - Add a file called `appsetting.json` in the AnimalShelterApi directory.
-- In `appsetting.json` add ![appsetting.json](Assets/setup.png)
 - Fill in your `server`, `port`,`database`,`uid`, and `pwd`
 - Template for appsettings.json provided below
-{
+  {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=DatabaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
+  "DefaultConnection": "Server=localhost;Port=3306;database=DatabaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
   }
-}
+  }
 
 ## Importing the provided Database
 
